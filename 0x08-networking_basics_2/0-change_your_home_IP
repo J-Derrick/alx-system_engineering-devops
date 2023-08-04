@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+#Bash script that modifies localhost to 127.0.0.2 and facebook.com to 8.8.8.8
+
+# Backup the original /etc/hosts file
+cp /etc/hosts /etc/hosts.old
+
+# Define the new DNS resolution mappings
+LOCALHOST_IP="127.0.0.2"
+FACEBOOK_IP="8.8.8.8"
+
+# Modify the /etc/hosts file to include the new mappings
+echo -e "$LOCALHOST_IP\tlocalhost" >> /etc/hosts
+echo -e "$FACEBOOK_IP\tfacebook.com" >> /etc/hosts
