@@ -3,7 +3,6 @@
 #configure ufw to block all incoming traffic except for the following TCP ports 22(SSH) 443(HTTPS SSL) and 80(HTTP)
 
 sudo apt install ufw
-sudo ufw status verbose
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
 sudo ufw allow 22/tcp
